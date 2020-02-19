@@ -10,7 +10,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name='pyaare',
-    version='1.0.0',
+    version='1.0.1',
     description='A Python wrapper around the aare.guru API',
     long_description=long_description,
     long_description_content_type='text/markdown',
@@ -27,6 +27,6 @@ setup(
     ],
 
     packages=find_packages(where='lib'),
-    python_requires='<=3.7',
+    python_requires='>=3.7',
     install_requires=['requests'],
 )
