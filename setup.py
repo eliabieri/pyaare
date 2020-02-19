@@ -12,6 +12,8 @@ setup(
     name='pyaare',
     version='1.0.0',
     description='A Python wrapper around the aare.guru API',
+    long_description=long_description,
+    long_description_content_type='text/markdown',
     url='https://github.com/eliabieri/pyaare',
     author='Elia Bieri',
     author_email='bieri.elia@gmail.com',
