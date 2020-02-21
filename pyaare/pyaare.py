@@ -1,4 +1,5 @@
 import requests
+from datetime import datetime
 
 class PyAare:
 
@@ -14,6 +15,7 @@ class PyAare:
 
         try:
             aareNode = self._getData()["aare"]
+            self._retrievedAt = datetime.fromtimestamp(aareNode["timestamp"])
             self._tempC = float(aareNode['temperature'])
             self._tempText = aareNode["temperature_text"]
             self._flow = aareNode["flow"]
@@ -43,6 +45,14 @@ class PyAare:
 
     def __repr__(self) -> str:
         return f"Aare Temperature: {self.tempC}°C, Text: {self.tempText}, Flow: {self.flow}, Text: {self.flowText}"
+
+    @property
+    def retrievedAt(self) -> datetime:
+        """ Returns the time at which the values were last retrieved
+        Returns:
+        datetime: time of last retrevial
+        """
+        return self._retrievedAt
 
     @property
     def tempC(self) -> float:
@@ -77,7 +87,7 @@ class PyAare:
         return self._flowText
 
     @property
-    def tempC2h(self):
+    def tempC2h(self) -> int:
         """ Returns a 2h forecast of the Aare temperature
         Returns:
         int: temperature in degree celcius
@@ -85,7 +95,7 @@ class PyAare:
         return self._tempC2h
 
     @property
-    def tempC2hText(self):
+    def tempC2hText(self) -> str:
         """ Returns the description text of 2h forecast of the Aare temperature
         Returns:
         str: description text
