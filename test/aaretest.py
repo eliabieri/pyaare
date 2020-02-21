@@ -17,6 +17,8 @@ class AareTest(unittest.TestCase):
         self.assertEqual("Gschider Iglu boue… aber mit was?", aare.tempText)
         self.assertEqual(87, aare.flow)
         self.assertEqual("nid viu", aare.flowText)
+        self.assertAlmostEqual(6.3, aare.tempC2h)
+        self.assertEqual("Blibt äuä öpe glich", aare.tempC2hText)
 
     def testCityNotSupperted(self):
         with self.assertRaises(RuntimeError):

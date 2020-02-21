@@ -18,6 +18,8 @@ class PyAare:
             self._tempText = aareNode["temperature_text"]
             self._flow = aareNode["flow"]
             self._flowText = aareNode["flow_text"]
+            self._tempC2h = aareNode["forecast2h"]
+            self._tempC2hText = aareNode["forecast2h_text"]
         except Exception as e:
             raise RuntimeError(f"Error while getting Aare data: {e}")
 
@@ -73,3 +75,19 @@ class PyAare:
         str: description text
         """
         return self._flowText
+
+    @property
+    def tempC2h(self):
+        """ Returns a 2h forecast of the Aare temperature
+        Returns:
+        int: temperature in degree celcius
+        """
+        return self._tempC2h
+
+    @property
+    def tempC2hText(self):
+        """ Returns the description text of 2h forecast of the Aare temperature
+        Returns:
+        str: description text
+        """
+        return self._tempC2hText
