@@ -1,6 +1,8 @@
 🏞 pyaare - A python wrapper round the AareGuru API
 ===============================
 
+![Upload Python Package](https://github.com/eliabieri/pyaare/workflows/Upload%20Python%20Package/badge.svg?branch=master)
+
 pypublibike makes it easy to access the [AareGuru](https://aare.guru/) API in your own Python projects.
 
 Quick Start
