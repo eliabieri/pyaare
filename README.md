@@ -3,6 +3,8 @@
 
 ![Upload Python Package](https://github.com/eliabieri/pyaare/workflows/Upload%20Python%20Package/badge.svg?branch=master)
 
+[![PyPI version](https://badge.fury.io/py/pyaare.svg)](https://badge.fury.io/py/pyaare)
+
 pypublibike makes it easy to access the [AareGuru](https://aare.guru/) API in your own Python projects.
 
 Quick Start
