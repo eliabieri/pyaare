@@ -14,7 +14,9 @@ class PyAare:
         """
 
         try:
-            aareNode = self._getData()["aare"]
+            data = self._getData()
+            assert(data["status"] == "OK")
+            aareNode = data["aare"]
             self._retrievedAt = datetime.fromtimestamp(aareNode["timestamp"])
             self._tempC = float(aareNode['temperature'])
             self._tempText = aareNode["temperature_text"]
