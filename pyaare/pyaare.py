@@ -30,7 +30,7 @@ class PyAare:
     def _checkCity(self, city: str):
         cities = requests.get(
             f'https://aareguru.existenz.ch/v2018/cities', timeout=5).json()
-        supportedCities = set([entry["city"].lower() for entry in cities])
+        supportedCities = {entry["city"].lower() for entry in cities}
         if city.lower() not in supportedCities:
             raise RuntimeError(f"City {city} is not supported")
 
