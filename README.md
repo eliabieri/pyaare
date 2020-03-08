@@ -5,7 +5,7 @@
 
 [![PyPI version](https://badge.fury.io/py/pyaare.svg)](https://badge.fury.io/py/pyaare)
 
-pypublibike makes it easy to access the [AareGuru](https://aare.guru/) API in your own Python projects.
+pyaare makes it easy to access the [AareGuru](https://aare.guru/) API in your own Python projects.
 
 Quick Start
 -----------
