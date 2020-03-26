@@ -24,7 +24,7 @@ class AareTest(unittest.TestCase):
 
     def testCityNotSupperted(self):
         with self.assertRaises(RuntimeError):
-            aare = PyAare("unsupportedCity")
+            PyAare("unsupportedCity")
 
 if __name__ == '__main__':
     unittest.main()
