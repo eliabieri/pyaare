@@ -7,7 +7,8 @@ from pyaare.pyaare import PyAare
 
 class AareTest(unittest.TestCase):
 
-    def getData(self):
+    @staticmethod
+    def getData():
         with open(os.path.join("test", "test.json")) as f:
             return json.load(f)
 

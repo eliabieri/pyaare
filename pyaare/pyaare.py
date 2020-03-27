@@ -27,7 +27,8 @@ class PyAare:
         except Exception as e:
             raise RuntimeError(f"Error while getting Aare data: {e}")
 
-    def _checkCity(self, city: str):
+    @staticmethod
+    def _checkCity(city: str):
         cities = requests.get(
             f'https://aareguru.existenz.ch/v2018/cities', timeout=5).json()
         supportedCities = {entry["city"].lower() for entry in cities}
@@ -40,7 +41,8 @@ class PyAare:
             f'http://aareguru.existenz.ch/currentV2.php?app=homeAnwendung?city={self._city}', timeout=5).json()
 
 
-    def _assertHttpOk(self, statusCode: int):
+    @staticmethod
+    def _assertHttpOk(statusCode: int):
         statusCodeOk = 200
         if statusCode != statusCodeOk:
             raise Exception(f'HTTP status code is {statusCode}, expected {statusCodeOk}')
