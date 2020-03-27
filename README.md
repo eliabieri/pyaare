@@ -5,6 +5,8 @@
 
 [![PyPI version](https://badge.fury.io/py/pyaare.svg)](https://badge.fury.io/py/pyaare)
 
+[![DeepSource](https://static.deepsource.io/deepsource-badge-light-mini.svg)](https://deepsource.io/gh/eliabieri/pyaare/?ref=repository-badge)
+
 pyaare makes it easy to access the [AareGuru](https://aare.guru/) API in your own Python projects.
 
 Quick Start
