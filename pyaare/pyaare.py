@@ -15,7 +15,7 @@ class PyAare:
 
         try:
             data = self._getData()
-            assert(data["status"] == "OK")
+            # assert(data["status"] == "OK")
             aareNode = data["aare"]
             self._retrievedAt = datetime.fromtimestamp(aareNode["timestamp"])
             self._tempC = float(aareNode['temperature'])
@@ -38,7 +38,7 @@ class PyAare:
 
     def _getData(self):
         return requests.get(
-            f'http://aareguru.existenz.ch/currentV2.php?app=homeAnwendung?city={self._city}', timeout=5).json()
+            f'https://aareguru.existenz.ch/v2018/current?app=homeAnwendung?city={self._city}', timeout=5).json()
 
 
     @staticmethod
