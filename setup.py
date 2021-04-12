@@ -10,7 +10,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name='pyaare',
-    version='1.3.1',
+    version='1.4.0',
     description='A Python wrapper around the aare.guru API',
     long_description=long_description,
     long_description_content_type='text/markdown',
